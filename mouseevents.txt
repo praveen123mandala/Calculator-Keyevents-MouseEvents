@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        margin-top: 50px;
+      }
+      .one{
+        padding: 20px;
+        background-color: rgb(136, 220, 220);
+        text-align: center;
+        font-weight: 600;
+        border-radius: 20px;
+        font-size: 20px;
+        border: none;
+      }
+    </style>
+</head>
+<body><center>
+  
+    <input type="text" id="res" class="one" placeholder="Type here">
+    <button onclick="ac()" class="one">AC</button> <br><br>
+   <button onclick="fun('1')" class="one">1</button> 
+   <button onclick="fun('2')" class="one">2</button> 
+   <button onclick="fun('3')" class="one">3</button>  
+    <button onclick="fun('+')" class="one">+</button><br> 
+ 
+   <button onclick="fun('4')" class="one">4</button>
+   <button onclick="fun('5')" class="one">5</button> 
+   <button onclick="fun('6')" class="one">6</button>
+   <button onclick="fun('-')" class="one">-</button> <br>
+
+   <button onclick="fun('7')" class="one">7</button> 
+   <button onclick="fun('8')" class="one">8</button> 
+   <button onclick="fun('9')" class="one">9</button> 
+   <button onclick="fun('*')" class="one">*</button> <br>
+   <button onclick="fun('0')" class="one">0</button>
+   <button onclick="fun('/')" class="one">/</button> 
+   <button onclick="fun('%')" class="one">%</button> 
+   <button onclick="fun('**')" class="one">**</button><br><br>
+   <button onclick="cal()" class="one">CLICK</button>  
+   <button ondblclick="cal()" class="one">DOUBLE</button> 
+   <button oncontextmenu="cal()" class="one">ON CONTEXT MENU</button> 
+   <button onmousedown="cal()" class="one">MOUSE DOWM</button> 
+   <button onmouseover="cal()" class="one">MOUSEOVER</button> 
+   <button onmouseout="cal()" class="one">MOUSE OUT</button> 
+   <button onmouseup="cal()" class="one">MOUSE UP</button><br><br> 
+  <script>
+    function ac(){
+      document.getElementById("res").value=""
+    }
+    function fun(input){
+      document.getElementById("res").value+=input;
+    }
+    function cal(){
+      var output=eval( document.getElementById("res").value);
+      document.getElementById("res").value=output;
+    }
+  </script>
+  </center>
+</body>
+</html>
